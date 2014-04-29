@@ -96,4 +96,9 @@ public class PrivateKeyLoader implements KeyLoader {
 
         return bytes;
     }
+
+    @Override
+    public PrivateKey getKey() {
+        return key;
+    }
 }

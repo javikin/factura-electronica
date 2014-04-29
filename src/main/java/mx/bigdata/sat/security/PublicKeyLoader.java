@@ -46,4 +46,9 @@ public class PublicKeyLoader implements KeyLoader {
         }
     }
 
+    @Override
+    public X509Certificate getKey() {
+        return key;
+    }
+
 }

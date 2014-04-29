@@ -7,9 +7,9 @@
 		En esta sección se define la inclusión de las plantillas de utilerías para colapsar espacios
 	-->
 	<xsl:include href="/xslt/cfd/2/cadenaoriginal_2_0/utilerias.xslt"/>
-	<!-- 
-		En esta sección se define la inclusión de las demás plantillas de transformación para 
-		la generación de las cadenas originales de los complementos fiscales 
+	<!--
+		En esta sección se define la inclusión de las demás plantillas de transformación para
+		la generación de las cadenas originales de los complementos fiscales
 	-->
 	<xsl:include href="/xslt/cfd/ecc/ecc.xslt"/>
 	<xsl:include href="/xslt/cfd/psgecfd/psgecfd.xslt"/>
@@ -25,7 +25,8 @@
 	<xsl:include href="/xslt/cfd/TuristaPasajeroExtranjero/TuristaPasajeroExtranjero.xslt"/>
 	<xsl:include href="/xslt/cfd/leyendasFiscales/leyendasFisc.xslt"/>
 	<xsl:include href="/xslt/cfd/nomina/nomina11.xslt"/>
-	
+	<xsl:include href="/xslt/cfd/notarios/notariospublicos.xslt"/>
+
 	<!-- Aquí iniciamos el procesamiento de la cadena original con su | inicial y el terminador || -->
 	<xsl:template match="/">|<xsl:apply-templates select="/cfdi:Comprobante"/>||</xsl:template>
 	<!--  Aquí iniciamos el procesamiento de los datos incluidos en el comprobante -->
@@ -206,7 +207,7 @@
 			<xsl:with-param name="valor" select="./@importe"/>
 		</xsl:call-template>
 		<!--
-			Manejo de los distintos sub nodos de información aduanera de forma indistinta 
+			Manejo de los distintos sub nodos de información aduanera de forma indistinta
 			a su grado de dependencia
 		-->
 		<xsl:for-each select=".//cfdi:InformacionAduanera">
